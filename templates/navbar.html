@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="ko">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Small Business - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Responsive navbar-->
+ <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <a class="navbar-brand" href="/">django company</a>
@@ -25,8 +8,7 @@
                         <li class="nav-item"><a class="nav-link" href="/company/">company info</a></li>
                         <li class="nav-item"><a class="nav-link" href="/mysite/">product</a></li>
                         {% if user.is_authenticated %}
-                        <li class="nav-item"><a class="nav-link" href="{% url
-                    'accounts:logout' %}">{{ user.username }} (logout) </a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'accounts:logout' %}">{{ user.username }} (logout) </a></li>
                         {% else %}
                         <li class="nav-item"><a class ="nav-link" href="{% url 'accounts:login' %}">login</a></li>
                         {% endif %}
